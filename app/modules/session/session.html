@@ -1,0 +1,17 @@
+
+<ion-view view-title="Questions" hide-nav-bar="false" hide-back-button="false">
+    <ion-nav-buttons side="secondary">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+    <div class="button button-block button-royal">Add Quesiton Button</div>
+    <div class="list">
+      <div ng-repeat="question in questions">
+        <div class="item" ng-click="showQuestion(question)">
+          {{question.title}}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="My Classes">
+    <ion-nav-buttons side="secondary">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+    <div class="button button-block button-royal"> Add Class </div>
+    <div class="list">
+      <div class="item item-divider"> My Classes </div>
+      <div ng-repeat="class in classes">
+        <div class="item" ng-click="goClass(class)">
+          {{class.title}}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
