@@ -1,0 +1,14 @@
+<ion-modal-view> <!-- This code is bad but whatever -->
+  <ion-header-bar class="bar bar-energized">
+    <h1 class="title">Enter name for the class</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" ng-model="input.title" placeholder="Name">
+      </label>
+    </div>
+    <div class="button button-block button-royal" ng-click="createClass()">Submit</div>
+    <div class="button button-block button-stable" ng-click="hideClassModal()">Cancel</div>
+  </ion-content>
+</ion-modal-view>

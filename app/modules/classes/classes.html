@@ -3,15 +3,18 @@
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
     </ion-nav-buttons>
-  <ion-content>
-    <div class="button button-block button-royal"> Add Class </div>
-    <div class="list">
-      <div class="item item-divider"> My Classes </div>
-      <div ng-repeat="class in classes">
-        <div class="item" ng-click="goClass(class)">
-          {{class.title}}
+  <ion-content scroll="false">
+    <ion-scroll>
+      <div class="list">
+        <div class="item item-divider"> My Classes </div>
+        <div ng-repeat="class in classes">
+          <div class="item" ng-click="goClass(class)">
+            {{class.title}}
+          </div>
         </div>
       </div>
-    </div>
+    </ion-scroll>
+    <div class="button button-block button-royal" ng-click="addClass()"> Add Class </div>
+    <div class="button button-block button-assertive" ng-click="deleteClass()"> Delete Class </div>
   </ion-content>
 </ion-view>
