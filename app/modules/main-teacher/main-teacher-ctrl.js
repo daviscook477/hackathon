@@ -32,6 +32,10 @@ angular.module('starter.main-teacher', ['starter.services.f'])
     }
   };
 
+  $scope.goClasses = function() {
+    $state.go('app.classes');
+  }
+
   // create the modal for login
   $ionicModal.fromTemplateUrl('modules/main-teacher/login-modal.html', {
     scope: $scope,
@@ -73,9 +77,6 @@ angular.module('starter.main-teacher', ['starter.services.f'])
         email: null,
         password: null
       };
-      console.log("login sucesful");
-      console.log(authData.uid);
-      $state.go('app.classes');
     });
     $scope.hideLoginModal();
   };
