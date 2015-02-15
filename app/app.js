@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher', 'starter.main-student', 'starter.classes', 'starter.sessions', 'starter.session', 'starter.student', 'starter.services.f', 'firebase'])
+angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher', 'starter.main-student', 'starter.classes', 'starter.sessions', 'starter.session', 'starter.student', 'starter.services.f', 'starter.services.random-an', 'firebase'])
 
-.run(function($ionicPlatform, $rootScope, $firebaseAuth, $f) {
+.run(function($ionicPlatform, $rootScope, $firebaseAuth, $f, randomAN) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -24,6 +24,10 @@ angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher',
   $rootScope.auth.$onAuth(function() {
     $rootScope.authObject = $rootScope.auth.$getAuth();
   });
+
+  for (var i = 0; i < 10; i++) {
+    console.log(randomAN.getRandomAN(10));
+  }
 
 })
 

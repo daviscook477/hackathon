@@ -1,4 +1,8 @@
-<ion-view view-title="Login and Signup" hide-nav-bar="false" hide-back-button="false">
+<ion-view view-title="Account Settings" hide-nav-bar="false" hide-back-button="false">
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
   <ion-content ng-controller="MainTeacherCtrl">
     <!-- TODO: tell the current logged in user -->
     <div ng-switch="authObject == null">
