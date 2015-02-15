@@ -1,10 +1,6 @@
 angular.module('starter.main-teacher', ['starter.services.f'])
 
-.controller('MainTeacherCtrl', function($scope, $ionicModal, $state, $timeout, $firebaseAuth, $f) {
-
-  $scope.auth = $firebaseAuth($f.ref());
-
-  console.log($f.ref());
+.controller('MainTeacherCtrl', function($scope, $ionicModal, $rootScope, $state, $timeout, $firebaseAuth, $f) {
 
   // intialize the input containers to empty
   $scope.resetInput = function() {
@@ -66,7 +62,6 @@ angular.module('starter.main-teacher', ['starter.services.f'])
   };
   $scope.doLogout = function() {
     $scope.auth.$unauth();
-    $state.go('app.main-menu');
   };
   $scope.doLogin = function() {
     var user = {

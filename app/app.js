@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher', 'starter.main-student', 'starter.classes', 'starter.sessions', 'starter.session', 'starter.student', 'firebase'])
+angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher', 'starter.main-student', 'starter.classes', 'starter.sessions', 'starter.session', 'starter.student', 'starter.services.f', 'firebase'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope, $firebaseAuth, $f) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -18,6 +18,13 @@ angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher',
       StatusBar.styleDefault();
     }
   });
+
+  $rootScope.auth = $firebaseAuth($f.ref()); // configure an auth object
+  $rootScope.authObject = $rootScope.auth.$getAuth();
+  $rootScope.auth.$onAuth(function() {
+    $rootScope.authObject = $rootScope.auth.$getAuth();
+  });
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

@@ -1,9 +1,18 @@
-<ion-header-bar class="bar bar-energized">
-  <h1 class="title">My Account</h1>
-</ion-header-bar>
+<ion-view view-title="Login and Signup">
 <ion-content ng-controller="MainTeacherCtrl">
   <!-- TODO: tell the current logged in user -->
-  <div class="button button-block button-royal" ng-click="showLoginModal()">Login</div>
-  <div class="button button-block button-royal" ng-click="showSignupModal()">Sign up</div>
-  <div class="button button-block button-assertive" ng-click="doLogout()">Log out</div>
+  <div ng-switch="authObject == null">
+    <div ng-switch-when="true">
+      <div class="button button-block button-royal" ng-click="showLoginModal()">Login</div>
+      <div class="button button-block button-royal" ng-click="showSignupModal()">Sign up</div>
+    </div>
+    <div ng-switch-when="false">
+      <div class="button button-block button-assertive" ng-click="doLogout()">Log out</div>
+    </div>
+  </div>
+  <div class="list">
+    <div class="item item-divider">Device Settings</div>
+    <!-- TODO: add any device settings -->
+  </div>
 </ion-content>
+</ion-view>

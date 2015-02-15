@@ -6,8 +6,6 @@ angular.module('starter.sessions', ['starter.services.f'])
 
   var id = $stateParams.id;
 
-  $scope.auth = $firebaseAuth(rootRef);
-
   if ($scope.auth.$getAuth() == null) {
     // when you are at this state, the user is logged in
     var userRef = rootRef.child("users").child($scope.auth.$getAuth().uid).child("classes").child(id);
