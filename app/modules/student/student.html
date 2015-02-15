@@ -1,12 +1,13 @@
 
-<ion-view view-title="Student" hide-nav-bar="false" hide-back-button="false">
-    <ion-nav-buttons side="secondary">
-      <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
-      </button>
-    </ion-nav-buttons>
-  <ion-content>
+<ion-view view-title="Student" hide-nav-bar="false" hide-back-button="true">
+  <ion-content scroll="false"> <!-- temp height -->
     <!-- TODO: directive for showing question -->
-    <div class="button button-block button-royal">Submit Answer</div>
+    <ion-scroll>
+
+      <div class="button button-block button-royal">Submit Answer</div>
+    </ion-scroll>
+
     <div class="button button-block button-royal">Send Question/Feedback</div>
+    <div class="button button-block button-assertive" ng-click="exitSession()">Exit Session</div>
   </ion-content>
 </ion-view>

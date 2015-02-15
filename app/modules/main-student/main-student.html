@@ -1,5 +1,13 @@
-<ion-view view-title="Student">
-  <ion-content>
-    <div class="button button-block button-royal" ng-click="goSession()">Go to Session</div>
+<ion-view view-title="Student" hide-nav-bar="false" hide-back-button="false">
+  <ion-content scroll="false">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" ng-model="input.id" placeholder="Class ID">
+      </label>
+      <label class="item item-input">
+        <input type="text" ng-model="input.name" placeholder="Nickname">
+      </label>
+    </div>
+    <div class="button button-block button-royal" ng-click="goSession()">Submit</div>
   </ion-content>
 </ion-view>
