@@ -4,15 +4,17 @@
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
     </ion-nav-buttons>
-  <ion-content>
+  <ion-content scroll="false">
     <div class="button button-block button-royal" ng-click="openSession()"> Open Session </div>
-    <div class="list">
-      <div class="item item-divider"> Previous Sessions </div>
-      <div ng-repeat="session in me.sessions">
-        <div class="item" ng-click="goSession(session)">
-          {{session.title}}
+    <ion-scroll>
+      <div class="list">
+        <div class="item item-divider"> Previous Sessions </div>
+        <div ng-repeat="session in sessions">
+          <div class="item" ng-click="goSession(session)">
+            {{session.title}}
+          </div>
         </div>
       </div>
-    </div>
+    </ion-scroll>
   </ion-content>
 </ion-view>

@@ -92,7 +92,7 @@ angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher',
   })
 
   .state('app.session', {
-    url: '/session:id',
+    url: '/session/:id',
     views: {
       'menuContent': {
         templateUrl: "modules/session/session.html",
@@ -102,7 +102,7 @@ angular.module('starter', ['ionic', 'starter.main-menu', 'starter.main-teacher',
   })
 
   .state('app.sessions', {
-    url: "/sessions:id",
+    url: "/sessions/:id",
     views: {
       'menuContent': {
         templateUrl: "modules/sessions/sessions.html",
